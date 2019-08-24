@@ -17,7 +17,7 @@ public class TestLambda {
         return personList;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         List<Person> personList = getPersons();
 
         System.out.println("Before Sorting By Salary :");

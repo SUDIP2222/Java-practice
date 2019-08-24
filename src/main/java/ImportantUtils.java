@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class ImportantUtils {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         System.out.println(stringToCapitalizeEveryWord("I am a java developer And wnat to be a good java developer"));
 
@@ -20,7 +20,7 @@ public class ImportantUtils {
 
     public static String stringToCapitalize(String input, boolean lowerRest) {
         return input.substring(0, 1).toUpperCase() +
-                (lowerRest ? input.substring(1, input.length()).toLowerCase() : input.substring(1, input.length()));
+                (lowerRest ? input.substring(1).toLowerCase() : input.substring(1));
     }
 
     public static List<String> stringToWords(final String string) {

@@ -1,5 +1,4 @@
 package Java8.SOILD.LiskovSubstitution.Good;
-
 import Java8.SOILD.LiskovSubstitution.Violate.Engine;
 
 public class TransportationWithEngine {

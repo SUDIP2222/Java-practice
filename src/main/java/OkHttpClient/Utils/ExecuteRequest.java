@@ -14,8 +14,9 @@ import org.apache.commons.collections4.MapUtils;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
-
-import static OkHttpClient.Contants.AppConstant.*;
+import static OkHttpClient.Contants.AppConstant.URL;
+import static OkHttpClient.Contants.AppConstant.HEADER_BUILDER;
+import static OkHttpClient.Contants.AppConstant.REQUEST_BODY;
 import static OkHttpClient.Utils.StringUtils.nullToBlank;
 
 public class ExecuteRequest {

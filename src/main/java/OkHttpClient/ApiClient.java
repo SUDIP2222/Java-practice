@@ -12,7 +12,9 @@ import com.squareup.okhttp.RequestBody;
 import java.io.IOException;
 import java.util.Map;
 
-import static OkHttpClient.Contants.AppConstant.*;
+import static OkHttpClient.Contants.AppConstant.URL;
+import static OkHttpClient.Contants.AppConstant.HEADER_BUILDER;
+import static OkHttpClient.Contants.AppConstant.REQUEST_BODY;
 
 public class ApiClient implements HttpClient {
 

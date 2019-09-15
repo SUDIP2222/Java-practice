@@ -1,14 +1,16 @@
 package OkHttpClient;
 
 import OkHttpClient.Utils.ExecuteRequest;
-import OkHttpClient.exceptions.BadRequestException;
-import OkHttpClient.exceptions.NotFoundException;
-import OkHttpClient.exceptions.AuthorizationException;
-import OkHttpClient.exceptions.ServiceConditionException;
-import OkHttpClient.exceptions.SystemException;
+import OkHttpClient.Exceptions.BadRequestException;
+import OkHttpClient.Exceptions.NotFoundException;
+import OkHttpClient.Exceptions.AuthorizationException;
+import OkHttpClient.Exceptions.ServiceConditionException;
+import OkHttpClient.Exceptions.SystemException;
 import com.squareup.okhttp.Headers;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
+import org.apache.commons.collections4.MapUtils;
+
 import java.io.IOException;
 import java.util.Map;
 
@@ -67,9 +69,11 @@ public class ApiClient implements HttpClient {
 
     }
 
-    public Map<String, Object> deleteRequest(String connectionUrl) throws BadRequestException,
+    public Map<String, Object> deleteRequest(String connectionUrl, Map<String, String> headers) throws BadRequestException,
             NotFoundException, AuthorizationException, ServiceConditionException, SystemException, IOException {
-        Request request = new Request.Builder().url(connectionUrl).delete().build();
+        headers = MapUtils.emptyIfNull(headers);
+        Headers headerBuilder = Headers.of(headers);
+        Request request = new Request.Builder().url(connectionUrl).headers(headerBuilder).delete().build();
         return executeRequest.getResponseMapByHttpRequestExecute(request);
     }
 

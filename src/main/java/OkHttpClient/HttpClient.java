@@ -1,10 +1,10 @@
 package OkHttpClient;
 
-import OkHttpClient.exceptions.BadRequestException;
-import OkHttpClient.exceptions.NotFoundException;
-import OkHttpClient.exceptions.AuthorizationException;
-import OkHttpClient.exceptions.ServiceConditionException;
-import OkHttpClient.exceptions.SystemException;
+import OkHttpClient.Exceptions.BadRequestException;
+import OkHttpClient.Exceptions.NotFoundException;
+import OkHttpClient.Exceptions.AuthorizationException;
+import OkHttpClient.Exceptions.ServiceConditionException;
+import OkHttpClient.Exceptions.SystemException;
 
 import java.io.IOException;
 import java.util.Map;
@@ -23,7 +23,7 @@ public interface HttpClient {
                                           Map<String, String> headers, boolean async) throws IOException,
             BadRequestException, NotFoundException, AuthorizationException, ServiceConditionException, SystemException;
 
-    public Map<String, Object> deleteRequest(String connectionUrl) throws IOException, BadRequestException,
+    public Map<String, Object> deleteRequest(String connectionUrl, Map<String, String> headers) throws IOException, BadRequestException,
             NotFoundException, AuthorizationException, ServiceConditionException, SystemException;
 
 

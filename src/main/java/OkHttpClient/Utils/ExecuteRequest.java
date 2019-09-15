@@ -1,10 +1,10 @@
 package OkHttpClient.Utils;
 
-import OkHttpClient.exceptions.BadRequestException;
-import OkHttpClient.exceptions.NotFoundException;
-import OkHttpClient.exceptions.AuthorizationException;
-import OkHttpClient.exceptions.ServiceConditionException;
-import OkHttpClient.exceptions.SystemException;
+import OkHttpClient.Exceptions.BadRequestException;
+import OkHttpClient.Exceptions.NotFoundException;
+import OkHttpClient.Exceptions.AuthorizationException;
+import OkHttpClient.Exceptions.ServiceConditionException;
+import OkHttpClient.Exceptions.SystemException;
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

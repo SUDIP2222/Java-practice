@@ -1,4 +1,4 @@
-package OkHttpClient.exceptions;
+package OkHttpClient.Exceptions;
 
 public class ApiException extends Exception {
 
